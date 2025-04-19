@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beacon of Hope Youth Foundation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #0d1b2a;
+      --accent-color: #fca311;
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --light-gray: #f5f5f5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .page-wrapper {
+      max-width: 1620px;
+      margin: 0 auto;
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      padding: 1rem 0;
+      color: white;
+    }
+
+    .site-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    .hero {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: slideshow 15s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    @keyframes slideshow {
+      0%, 33.33% {
+        background-image: url('images/imageplaceholder.jpg');
+      }
+      33.34%, 66.66% {
+        background-image: url('images/placeholder2.jpeg');
+      }
+      66.67%, 100% {
+        background-image: url('images/imageplaceholder2.jpg');
+      }
+    }
+
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding-top: 4rem;
+    }
+
+    .hero-overlay h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-overlay p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-overlay .btn {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      margin: 0 0.5rem;
+      display: inline-block;
+    }
+
+    .section {
+      padding: 3rem 0;
+    }
+
+    .section.bg-light {
+      background-color: var(--light-gray);
+    }
+
+    .section h3 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+      font-size: 2rem;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .feature-box {
+      flex: 1 1 200px;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .logo-feature {
+      flex: 1 1 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .logo-feature img {
+      height: 100%;
+      max-height: 350px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .cta-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .cta-card {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      text-align: center;
+    }
+
+    .cta-card h4 {
+      margin-bottom: 1rem;
+    }
+
+    .cta-card a {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    @media (max-width: 1200px) {
+      .page-wrapper {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-overlay h2 {
+        font-size: 2rem;
+      }
+
+      .hero-overlay p {
+        font-size: 1rem;
+      }
+
+      .features,
+      .cta-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .logo-feature {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-wrapper > header > div {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      .features,
+      .cta-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-overlay h2 {
+        font-size: 1.75rem;
+      }
+
+      .hero-overlay p {
+        font-size: 0.95rem;
+      }
+
+      .hero-overlay .btn {
+        display: block;
+        margin: 0.5rem auto;
+      }
+
+      .logo-feature img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <header>
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <div class="site-title">Beacon of Hope Youth Foundation</div>
+        <nav>
+          <a href="#programs">Programs</a>
+          <a href="#get-involved">Get Involved</a>
+          <a href="#donate">Donate</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-overlay">
+        <h2>Empowering Youth. Building Futures.</h2>
+        <p>Advocacy, education, and life skills for foster, homeless, and at-risk youth ages 16–24.</p>
+        <a href="#donate" class="btn">Donate Now</a>
+        <a href="#learn-more" class="btn">Learn More</a>
+      </div>
+    </section>
+
+    <section class="section" id="learn-more">
+      <h3>Our Mission</h3>
+      <div class="features">
+        <div class="logo-feature">
+          <img src="images/beaconlogotemp.PNG" alt="Beacon of Hope Logo">
+        </div>
+        <div class="feature-box">
+          <h4>Advocacy</h4>
+          <p>We speak up for youth facing housing instability and systemic challenges.</p>
+        </div>
+        <div class="feature-box">
+          <h4>Life Skills</h4>
+          <p>We equip young people with the tools they need to thrive independently.</p>
+        </div>
+        <div class="feature-box">
+          <h4>Mentorship</h4>
+          <p>We match youth with trusted mentors to guide them through life transitions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light" id="get-involved">
+      <h3>How You Can Help</h3>
+      <div class="cta-cards">
+        <div class="cta-card">
+          <h4>Become a Volunteer</h4>
+          <p>Support youth in your community with your time and talents.</p>
+          <a href="#volunteer">Sign Up</a>
+        </div>
+        <div class="cta-card">
+          <h4>Donate Today</h4>
+          <p>Every dollar helps us provide crucial programs and services.</p>
+          <a href="#donate">Make a Gift</a>
+        </div>
+        <div class="cta-card">
+          <h4>Mentor a Youth</h4>
+          <p>Make a lasting impact as a consistent, caring adult.</p>
+          <a href="#mentor">Get Involved</a>
+        </div>
+        <div class="cta-card">
+          <h4>Book a Consultation</h4>
+          <p>Let’s talk about how we can support your journey or partner with you.</p>
+          <a href="#consultation">Book Now</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer id="contact">
+    <p>© 2025 Beacon of Hope Youth Foundation | Little Rock, AR</p>
+    <p>Follow us: 
+      <a href="#" style="color: #fca311;">Facebook</a> |
+      <a href="#" style="color: #fca311;">Instagram</a> |
+      <a href="#" style="color: #fca311;">LinkedIn</a>
+    </p>
+  </footer>
+
+</body>
+</html>
